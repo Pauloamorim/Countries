@@ -10,4 +10,7 @@ export class CountryService {
   getCountry(): Observable<Object>{
     return this.http.get('https://restcountries.eu/rest/v2/all');
   }
+  getCountryByName(name):Observable<Object>{
+    return this.http.get('https://restcountries.eu/rest/v2/name/'+name);
+  }
 }
